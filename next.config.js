@@ -4,12 +4,12 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/insta/:path',
-        destination: '/instas',
-        permanent: false,
+        source: "/insta/:id",
+        destination: "/insta?profile=:id",
+        permanent: true,
       },
-    ]
+    ];
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
