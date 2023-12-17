@@ -16,8 +16,12 @@ export default function Home() {
         setId(id)
     }
 
-    const router = useRouter()
-    console.log(router.query)
+    useEffect(() => {
+        let url = window.location.href.split("?")[1].split("=")
+        if(url[0] === "profile") {
+            setId(url[1])
+        }
+    })
 
     let datas = [
         {
